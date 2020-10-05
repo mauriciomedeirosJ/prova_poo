@@ -30,33 +30,9 @@
             RA: 1290481913027
             <br>
             Nome: Maurício Medeiros de Jesus
-            <br>
-            <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Ementa</th>
-                    <th scope="col">Nota</th>
-                </tr>
-            </thead>
-            <tbody>
-                <%
-
-                    for (int i = 0; i < disciplinas.size(); i++) {
-                %>
-                <tr>
-                    <th scope="row"><%= i + 1%></th>
-                    <td><%=disciplinas.get(i).getNome()%></td>
-                    <td><%=disciplinas.get(i).getEmenta()%></td>
-                    <td><%=disciplinas.get(i).getNota()%></td>
-                </tr>
-
-                <%}%>
-
-
-            </tbody>
-        </table>
         </h1>
+        <br>
+        <h3> Quantidade de disciplinas cursadas no 4 semestre: <%=disciplinas.size()%></h3>
+
     </body>
 </html>
