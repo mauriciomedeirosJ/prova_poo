@@ -26,6 +26,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="menu.jspf"%>
+        
         <h1>
             RA: 1290481913027
             <br>

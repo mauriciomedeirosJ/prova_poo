@@ -32,6 +32,7 @@ ArrayList<Disciplina> disciplinas = (ArrayList) application.getAttribute("discip
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="menu.jspf"%>
         <table class="table table-striped">
             <thead>
                 <tr>

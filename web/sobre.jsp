@@ -12,12 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="menu.jspf"%>
         <h1>
             RA: 1290481913027
             <br>
             Nome: Maurício Medeiros de Jesus
             <br>
-            <a href="https://github.com/mauriciomedeirosJ/prova_poo">Link GitHub</a>
+            <a href="https://github.com/mauriciomedeirosJ/prova_poo" target="blank">Link GitHub</a>
         </h1>
     </body>
 </html>
