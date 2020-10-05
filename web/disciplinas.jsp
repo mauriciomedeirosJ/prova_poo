@@ -15,7 +15,8 @@ ArrayList<Disciplina> disciplinas = (ArrayList) application.getAttribute("discip
         disciplinas.add(new Disciplina("POO", "Conceitos de orientacao a objeto", 4));
         disciplinas.add(new Disciplina("Programacao web", "Conceitos de programacao web", 3));
         disciplinas.add(new Disciplina("Banco de dados", "Conceitos de banco de dados", 4));
-        application.setAttribute("disciplinas", disciplinas);
+        application.setAttribute("disciplinas", disciplinas.get(0).getList(disciplinas, 4));
+        response.sendRedirect(request.getRequestURI());
     }
     if (request.getParameter("add") != null) {
         int i = Integer.parseInt(request.getParameter("i"));
