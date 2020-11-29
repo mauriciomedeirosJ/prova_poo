@@ -61,15 +61,17 @@ public class Disciplina {
             if(methodException!=null) throw methodException;
             return list;
         }
-        public static void updateNota(String nome, float nota) throws Exception{
+        public static void updateDisciplina(String nome, String ementa, int ciclo, float nota) throws Exception{
             Disciplina materia = null;
             Connection con = null; PreparedStatement stmt = null; ResultSet rs = null;
             Exception methodException = null;
             try{
                 con = DbListener.getConnection();
-                stmt = con.prepareStatement("UPDATE disciplinas SET nota = ? WHERE nome = ?");
+                stmt = con.prepareStatement("UPDATE disciplinas SET nota = ?, ementa = ?, ciclo = ? WHERE nome = ?");
                 stmt.setFloat(1, nota);
-                stmt.setString(2, nome);
+                stmt.setString(2, ementa);
+                stmt.setInt(3, ciclo);
+                stmt.setString(4, nome);
                 stmt.execute();
             }catch(Exception ex){
                 methodException = ex;
